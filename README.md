@@ -14,27 +14,40 @@ The API endpoints allow users to access the following functionalities:
 Prerequisites
 
 Python (3.7 or higher)
+
 Virtualenv
+
 SQLite 
 
+
 Installation and Usage
+
 To create a virtual environment:
+
 pip install virtualenv
+
 virtualenv env
 
 
 To activate the virtual environment:
+
 env/Scripts/activate (Windows)
+
+
 source env/bin/activate (Mac/Linux)
 
 
 Install the required dependencies:
+
 pip install -r requirements.txt
 
 
 Run migrations:
+
 python3 src/manage.py makemigrations
+
 python3 src/manage.py migrate
+
 
 
 Ingest the data:
@@ -49,8 +62,11 @@ python3 src/manage.py runserver
 Access the API endpoints, use the following links:
 
 http://127.0.0.1:8000/api/weather
+
 http://127.0.0.1:8000/api/weather/stats
+
 http://127.0.0.1:8000/api/schema/swagger-ui/
+
 
 
 To run tests:
@@ -58,8 +74,10 @@ cd src
 python manage.py test
 
 
-To deploy the API on AWS, follow these three steps:
+To deploy the API on AWS, follow these steps:
 
 1.Deploy the Django API using AWS EC2 and the database with Amazon Relational Database Service (RDS).
+
 2.Utilize AWS S3 to store data.
+
 3.Schedule data ingestion with AWS EC2 by creating a cron job and store the ingested data in the RDS database.
